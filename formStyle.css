@@ -1,0 +1,38 @@
+.style-4 {
+  /* padding: 10px; */
+  border: none;
+  border-bottom: solid 1px #c9c9c9;
+  transition: border 0.3s;
+  text-align: right;
+  width: 150px;
+}
+.style-5 {
+  padding: 0 0 0 0px;
+  margin: 0 0 0 0px;
+  /* border: none; */
+  border: solid 1px #c9c9c9;
+  border-top: none;
+  transition: border 0.3s;
+  text-align: left;
+  /* font-weight: bold; */
+  width: 150px;
+}
+
+.style-6 {
+    /* border-collapse: collapse; */
+	font-style: italic;
+}
+
+td.style-6 {
+    /* padding-top: .0em;
+    padding-bottom: .3em; */
+/* 	margin: 12 0 0 0px; */
+}
+
+:focus {
+    outline: 0;
+}
+.leftSide {
+    float: left;
+}
+
