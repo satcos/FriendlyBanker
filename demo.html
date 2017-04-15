@@ -18,19 +18,29 @@
         <div class="tabcontents">
             <div id="view1">
 				<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
-					<table>
+					<table id="denominationTable">
 						<tr>
 							<td>
-								<label class="style-6" for="di1000">1000</label><br />
-								<input class="style-5" type="number" id="di1000" name="di1000" min="0" max="999" step="1" tabindex=1 autocomplete="off" oninput="myFunction()" />
+								<br /><label class="style-6" for="di2000">2000</label>
+								<input class="style-5" type="number" id="di2000" name="di2000" min="0" max="999" step="1" tabindex=1 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do1000" name="do1000" tabindex=-1 readonly />
+								<br /><input class="style-4" type="number" id="do2000" name="do2000" tabindex=-1 readonly />
+							</td>
+							<td rowspan="7">
+								<p style="text-align:right; width:200px;">
+									 <br />
+									<!-- <input type="submit" value="Input - Submit" />
+									&nbsp; -->
+									<!-- <button type="reset" value="Input - Reset">Reset</button> -->
+									<input class="reset" type="reset" value= "" />
+									
+								</p>
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<label class="style-6" for="di500">500</label><br />
+							<td> 
+								<br /><label class="style-6" for="di500">500</label>
 								<input class="style-5" type="number" id="di500" name="di500" min="0" max="999" step="1" tabindex=2 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -39,7 +49,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="di100">100</label><br />
+								<br /><label class="style-6" for="di100">100</label>
 								<input class="style-5" type="number" id="di100" name="di100" min="0" max="999" step="1" tabindex=3 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -48,7 +58,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="di50">50</label><br />
+								<br /><label class="style-6" for="di50">50</label>
 								<input class="style-5" type="number" id="di50" name="di50" min="0" max="999" step="1" tabindex=4 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -57,7 +67,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="di20">20</label><br />
+								<br /><label class="style-6" for="di20">20</label>
 								<input class="style-5" type="number" id="di20" name="di20" min="0" max="999" step="1" tabindex=5 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -66,7 +76,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="di10">10</label><br />
+								<br /><label class="style-6" for="di10">10</label>
 								<input class="style-5" type="number" id="di10" name="di10" min="0" max="999" step="1" tabindex=6 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -75,7 +85,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="di5">5</label><br />
+								<br /><label class="style-6" for="di5">5</label>
 								<input class="style-5" type="number" id="di5" name="di5" min="0" max="999" step="1" tabindex=7 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -84,7 +94,7 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="dicoins">Coins</label><br />
+								<br /><label class="style-6" for="dicoins">Coins</label>
 								<input class="style-5" type="number" id="dicoins" name="dicoins" min="0" max="999" step="1" tabindex=8 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
@@ -93,49 +103,189 @@
 						</tr>
 						<tr>
 							<td>
-								<label><b>Total</b></label>
+								<br /><label class="style-6" for="disoiled">Soiled</label>
+								<input class="style-5" type="number" id="disoiled" name="disoiled" min="0" max="999" step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="dototal" name="dototal" tabindex=-1 readonly />
+								<br /><input class="style-4" type="number" id="dosoiled" name="dosoiled" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="dicash"><b>Cash Position</b></label><br />
-								<input class="style-5" type="number" id="dicash" name="dicash" min="0" max="999" step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
+								<label class="style-6"><b>Total</b></label>
+							</td>
+							<td>
+								<br /><input class="style-4" style="font-weight: bold;" type="number" id="dototal" name="dototal" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="style-6" for="dicash"><b>Cash Position</b></label>
+								<input class="style-5" type="number" id="dicash" name="dicash" min="0" max="999" step="1" tabindex=10 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="number" id="docash" name="docash" tabindex=-1 readonly />
 							</td>
 						</tr>
 					</table>
-					<p>
-						<input type="submit" value="Input - Submit" />
-						&nbsp;
-						<input type="reset" value="Input - Reset" />
-					</p>
 				</form>
             </div>
             <div id="view2">
-                <b>Switch to other templates</b>
-                <p>Open this page with Notepad, and update the CSS link to:</P>
-                <p>template1 ~ 6.</p>                
+				<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
+					<table id="arrivalTable" border=0>
+						<tr style="text-align: center; font-weight: bold;">
+							<td>Placed In Safe</td>
+							<td>Taken From Safe</td>
+							<td>Cash In Safe</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai2000">2000</label>
+								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0" max="999" step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0" max="999" step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab2000" name="ab2000" tabindex=-1 readonly />
+							</td>
+							<td rowspan="7">
+								<p style="text-align:right; width:200px;">
+									 <br />
+									<!-- <input type="submit" value="Input - Submit" />
+									&nbsp; -->
+									<!-- <button value="Input - Reset" onclick="saveSafe();">Save</button> -->
+									<input class="reset" type="reset" value= "" />
+									
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								<br /><label class="style-6" for="ai500">500</label>
+								<input class="style-5" type="number" id="ai500" name="ai500" min="0" max="999" step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td> 
+								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0" max="999" step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab500" name="ab500" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai100">100</label>
+								<input class="style-5" type="number" id="ai100" name="ai100" min="0" max="999" step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0" max="999" step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab100" name="ab100" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai50">50</label>
+								<input class="style-5" type="number" id="ai50" name="ai50" min="0" max="999" step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0" max="999" step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab50" name="ab50" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai20">20</label>
+								<input class="style-5" type="number" id="ai20" name="ai20" min="0" max="999" step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0" max="999" step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab20" name="ab20" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai10">10</label>
+								<input class="style-5" type="number" id="ai10" name="ai10" min="0" max="999" step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0" max="999" step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab10" name="ab10" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai5">5</label>
+								<input class="style-5" type="number" id="ai5" name="ai5" min="0" max="999" step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0" max="999" step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="ab5" name="ab5" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="aicoins">Coins</label>
+								<input class="style-5" type="number" id="aicoins" name="aicoins" min="0" max="999" step="1" tabindex=8 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="aocoins" name="aocoins" min="0" max="999" step="1" tabindex=17 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="abcoins" name="abcoins" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="aisoiled">Soiled</label>
+								<input class="style-5" type="number" id="aisoiled" name="aisoiled" min="0" max="999" step="1" tabindex=9 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="aosoiled" name="aosoiled" min="0" max="999" step="1" tabindex=18 autocomplete="off" oninput="arrivalCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="number" id="absoiled" name="absoiled" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" style="font-weight: bold;" for="aitotoal">Total</label>
+								<input class="style-4" style="font-weight: bold;" type="number" id="aitotal" name="aitotal" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" style="font-weight: bold;" type="number" id="aototal" name="aototal" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" style="font-weight: bold;" type="number" id="abtotal" name="abtotal" tabindex=-1 readonly />
+							</td>
+						</tr>
+					</table>
+				</form>
             </div>
             <div id="view3">
-                <b>Advanced</b>
-                <p>If you expect a more feature-rich version of the tabber, you can use the advanced version of the script, 
-                    <a href="http://www.menucool.com/jquery-tabs">McTabs - jQuery Tabs</a>:</p>
-                <ul>
-                    <li>URL support: a hash id in the URL can select a tab</li>
-                    <li>Bookmark support: select a tab via bookmark anchor</li>
-                    <li>Select tabs by mouse over</li>
-                    <li>Auto advance</li>
-                    <li>Smooth transitional effect</li>
-                    <li>Content can retrieved from other documents or pages through Ajax</li>
-                    <li>... and more</li>     
-                </ul>
+                <b>Coming Soon...</b>
             </div>
         </div>
     </div>
+	
+	
+	
+	
+	<!-- Java Script -->
+	
+	
+	
+	
+	
 </body>
 </html>
