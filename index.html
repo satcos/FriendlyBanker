@@ -43,6 +43,11 @@
 		/* 	margin: 12 0 0 0px; */
 		}
 
+		.style-small {
+			/* border-collapse: collapse; */
+			width: 70px;
+		}
+		
 		:focus {
 			outline: 0;
 		}
@@ -139,7 +144,7 @@
 	
 </head>
 <body style="background:#F6F9FC; font-family:Arial;">
-    <div style="width: 900px; margin: 0 auto; padding: 12px 0 40px;">
+    <div style="width: 1120px; margin: 0 auto; padding: 12px 0 40px;">
         <ul class="tabs" data-persist="true">
             <li><a href="#view1">Denomination</a></li>
             <li><a href="#view2">Arrival</a></li>
@@ -403,7 +408,229 @@
 				</form>
             </div>
             <div id="view3">
-                <b>Coming Soon...</b>
+				<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
+					<table id="coinwareTable" border=0>
+						<tr style="text-align: center; font-weight: bold;">
+							<td>Cash Position</td>
+							<td>Safe</td>
+							<td>Total</td>
+							<td>Tray Count</td>
+							<td>Tray Amount</td>
+							<td>Grand Total</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc2000">2000</label>
+								<input class="style-5" type="number" id="cc2000" name="cc2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs2000" name="cs2000" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct2000" name="ct2000" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg2000" name="cg2000" tabindex=-1 readonly />
+							</td>
+							<td rowspan="7">
+								<p style="text-align:right; width:140px;">
+									 <br />
+									<!-- <input type="submit" value="Input - Submit" />
+									&nbsp; -->
+									<!-- <button value="Input - Reset" onclick="saveSafe();">Save</button> -->
+									<input class="reset" type="reset" value= "" onclick="document.getElementById('cc2000').focus(); return true;" />
+									
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc500">500</label>
+								<input class="style-5" type="number" id="cc500" name="cc500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs500" name="cs500" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct500" name="ct500" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg500" name="cg500" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc100">100</label>
+								<input class="style-5" type="number" id="cc100" name="cc100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs100" name="cs100" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct100" name="ct100" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg100" name="cg100" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc50">50</label>
+								<input class="style-5" type="number" id="cc50" name="cc50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs50" name="cs50" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct50" name="ct50" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg50" name="cg50" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc20">20</label>
+								<input class="style-5" type="number" id="cc20" name="cc20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs20" name="cs20" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct20" name="ct20" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="cn20" name="cn20" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="ca20" name="ca20" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg20" name="cg20" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc10">10</label>
+								<input class="style-5" type="number" id="cc10" name="cc10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs10" name="cs10" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct10" name="ct10" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="cn10" name="cn10" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="ca10" name="ca10" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg10" name="cg10" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc5">5</label>
+								<input class="style-5" type="number" id="cc5" name="cc5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs5" name="cs5" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct5" name="ct5" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="cn5" name="cn5" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="ca5" name="ca5" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg5" name="cg5" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cccoins">Coins</label>
+								<input class="style-5" type="number" id="cccoins" name="cccoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cscoins" name="cscoins" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ctcoins" name="ctcoins" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="cncoins" name="cncoins" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="cacoins" name="cacoins" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cgcoins" name="cgcoins" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ccsoiled">Soiled</label>
+								<input class="style-5" type="number" id="ccsoiled" name="ccsoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cssoiled" name="cssoiled" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ctsoiled" name="ctsoiled" tabindex=-1 readonly />
+							</td>
+							<td>
+								
+							</td>
+							<td>
+								
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cgsoiled" name="cgsoiled" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cctotal">Total</label>
+								<input class="style-4" type="text" id="cctotal" name="cctotal" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cstotal" name="cstotal" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cttotal" name="cttotal" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4 style-small" type="text" id="catotal" name="catotal" tabindex=-1 readonly />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cgtotal" name="cgtotal" tabindex=-1 readonly />
+							</td>
+						</tr>
+					</table>
+				</form>
             </div>
         </div>
     </div>
@@ -550,6 +777,122 @@
 				
 			document.getElementById("abtotal").value = commify(document.getElementById("aitotal").value.replace(/,/g, "") - document.getElementById("aototal").value.replace(/,/g, ""))
 		}
+		
+		
+		function coinwareCalc(event){
+			event = event || window.event
+			var target = event.target || event.srcElement;
+			var id = target.id
+			switch (id)	{
+				case "cc2000":
+				case "cs2000":
+					document.getElementById("ct2000").value = commify(document.getElementById("cc2000").value * 2000 + document.getElementById("cs2000").value * 1)
+					document.getElementById("cg2000").value = document.getElementById("ct2000").value
+				break;
+				case "cc500":
+				case "cs500":
+					document.getElementById("ct500").value = commify(document.getElementById("cc500").value * 500 + document.getElementById("cs500").value * 1)
+					document.getElementById("cg500").value = document.getElementById("ct500").value
+				break;
+				case "cc100":
+				case "cs100":
+					document.getElementById("ct100").value = commify(document.getElementById("cc100").value * 100 + document.getElementById("cs100").value * 1)
+					document.getElementById("cg100").value = document.getElementById("ct100").value
+				break;
+				case "cc50":
+				case "cs50":
+					document.getElementById("ct50").value = commify(document.getElementById("cc50").value * 50 + document.getElementById("cs50").value * 1)
+					document.getElementById("cg50").value = document.getElementById("ct50").value
+				break;
+				case "cc20":
+				case "cs20":
+					var notes = document.getElementById("cc20").value * 1 + document.getElementById("cs20").value / 20
+					var trayNotes = notes % 100
+					notes = notes - trayNotes
+					document.getElementById("ct20").value = commify(notes * 20)
+					document.getElementById("cn20").value = trayNotes
+					document.getElementById("ca20").value = commify(trayNotes * 20)
+					document.getElementById("cg20").value = commify(Number(document.getElementById("ct20").value.replace(/,/g, "")) + Number(document.getElementById("ca20").value.replace(/,/g, "")))
+				break;
+				case "cc10":
+				case "cs10":
+					var notes = document.getElementById("cc10").value * 1 + document.getElementById("cs10").value / 10
+					var trayNotes = notes % 100
+					notes = notes - trayNotes
+					document.getElementById("ct10").value = commify(notes * 10)
+					document.getElementById("cn10").value = trayNotes
+					document.getElementById("ca10").value = commify(trayNotes * 10)
+					document.getElementById("cg10").value = commify(Number(document.getElementById("ct10").value.replace(/,/g, "")) + Number(document.getElementById("ca10").value.replace(/,/g, "")))
+				break;
+				case "cc5":
+				case "cs5":
+					var notes = document.getElementById("cc5").value * 1 + document.getElementById("cs5").value / 5
+					var trayNotes = notes % 100
+					notes = notes - trayNotes
+					document.getElementById("ct5").value = commify(notes * 5)
+					document.getElementById("cn5").value = trayNotes
+					document.getElementById("ca5").value = commify(trayNotes * 5)
+					document.getElementById("cg5").value = commify(Number(document.getElementById("ct5").value.replace(/,/g, "")) + Number(document.getElementById("ca5").value.replace(/,/g, "")))
+				break;
+				case "cccoins":
+				case "cscoins":
+					var notes = document.getElementById("cccoins").value * 1 + document.getElementById("cscoins").value * 1
+					var trayNotes = notes % 1000
+					notes = notes - trayNotes
+					document.getElementById("ctcoins").value = commify(notes * 1)
+					document.getElementById("cncoins").value = trayNotes
+					document.getElementById("cacoins").value = commify(trayNotes * 1)
+					document.getElementById("cgcoins").value = commify(Number(document.getElementById("ctcoins").value.replace(/,/g, "")) + Number(document.getElementById("cacoins").value.replace(/,/g, "")))
+				break;
+				case "ccsoiled":
+				case "cssoiled":
+					document.getElementById("ctsoiled").value = commify(document.getElementById("ccsoiled").value * 1 + document.getElementById("cssoiled").value * 1)
+					document.getElementById("cgsoiled").value = document.getElementById("ctsoiled").value
+				break;
+				default:
+					void(0)
+			}
+			
+			document.getElementById("cctotal").value = commify(Number(document.getElementById("cc2000").value) * 2000 +
+				Number(document.getElementById("cc500").value) * 500 +
+				Number(document.getElementById("cc100").value) * 100 +
+				Number(document.getElementById("cc50").value) * 50 +
+				Number(document.getElementById("cc20").value) * 20 +
+				Number(document.getElementById("cc10").value) * 10 +
+				Number(document.getElementById("cc5").value) * 5 +
+				Number(document.getElementById("cccoins").value) +
+				Number(document.getElementById("ccsoiled").value))
+				
+			document.getElementById("cstotal").value = commify(Number(document.getElementById("cs2000").value) +
+				Number(document.getElementById("cs500").value) +
+				Number(document.getElementById("cs100").value) +
+				Number(document.getElementById("cs50").value) +
+				Number(document.getElementById("cs20").value) +
+				Number(document.getElementById("cs10").value)+
+				Number(document.getElementById("cs5").value) +
+				Number(document.getElementById("cscoins").value) +
+				Number(document.getElementById("cssoiled").value))
+			
+			document.getElementById("cttotal").value = commify(Number(document.getElementById("ct2000").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct500").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct100").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct50").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct20").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct10").value.replace(/,/g, "")) +
+				Number(document.getElementById("ct5").value.replace(/,/g, "")) +
+				Number(document.getElementById("ctcoins").value.replace(/,/g, "")) +
+				Number(document.getElementById("ctsoiled").value.replace(/,/g, "")))
+			
+			document.getElementById("catotal").value = commify(Number(document.getElementById("ca20").value) +
+				Number(document.getElementById("ca10").value)+
+				Number(document.getElementById("ca5").value) +
+				Number(document.getElementById("cacoins").value))
+				
+			document.getElementById("cgtotal").value = commify(Number(document.getElementById("cttotal").value.replace(/,/g, "")) +
+				Number(document.getElementById("catotal").value.replace(/,/g, "")))
+		}
+		
+		
 		function saveSafe()	{
 			console.log("save files")
 			createCookie("ai2000", document.getElementById("ai2000").value)
@@ -671,7 +1014,65 @@
 					break;
 					case "aocoins":
 						document.getElementById("aosoiled").focus()
-					break;					
+					break;
+					case "cc2000":
+						document.getElementById("cc500").focus()
+					break;
+					case "cc500":
+						document.getElementById("cc100").focus()
+					break;
+					case "cc100":
+						document.getElementById("cc50").focus()
+					break;
+					case "cc50":
+						document.getElementById("cc20").focus()
+					break;
+					case "cc20":
+						document.getElementById("cc10").focus()
+					break;
+					case "cc10":
+						document.getElementById("cc5").focus()
+					break;
+					case "cc5":
+						document.getElementById("cccoins").focus()
+					break;
+					case "cccoins":
+						document.getElementById("ccsoiled").focus()
+					break;
+					case "ccsoiled":
+						document.getElementById("cs2000").focus()
+					break;
+					case "cs2000":
+						document.getElementById("cs500").focus()
+					break;
+					case "cs500":
+						document.getElementById("cs100").focus()
+					break;
+					case "cs100":
+						document.getElementById("cs50").focus()
+					break;
+					case "cs50":
+						document.getElementById("cs20").focus()
+					break;
+					case "cs20":
+						document.getElementById("cs10").focus()
+					break;
+					case "cs10":
+						document.getElementById("cs5").focus()
+					break;
+					case "cs5":
+						document.getElementById("cscoins").focus()
+					break;
+					case "cscoins":
+						document.getElementById("cssoiled").focus()
+					break;
+					
+					
+					
+					
+					
+					
+					
 					default:
 						void(0)
 				}
