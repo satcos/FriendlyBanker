@@ -22,12 +22,14 @@
 		  transition: border 0.3s;
 		  text-align: left;
 		  /* font-weight: bold; */
+		  font-size: larger;
 		  width: 150px;
 		}
 
 		.style-6 {
 			/* border-collapse: collapse; */
 			padding: 0 10px 0 0px;
+			font-size: large;
 			font-style: italic;
 			width: 60px;
 			display:inline-block;
@@ -61,6 +63,16 @@
 			margin-left: auto ;
 			margin-right: auto ;
 		}
+		
+		input[type="number"]::-webkit-outer-spin-button,
+		input[type="number"]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		input[type="number"] {
+			-moz-appearance: textfield;
+		}
+		
 	</style>
 	<!-- End of Form styling -->
 	
@@ -140,10 +152,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di2000">2000</label>
-								<input class="style-5" type="number" id="di2000" name="di2000" min="0" max="999" step="1" tabindex=1 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di2000" name="di2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do2000" name="do2000" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do2000" name="do2000" tabindex=-1 readonly />
 							</td>
 							<td rowspan="7">
 								<p style="text-align:right; width:200px;">
@@ -151,7 +163,7 @@
 									<!-- <input type="submit" value="Input - Submit" />
 									&nbsp; -->
 									<!-- <button type="reset" value="Input - Reset">Reset</button> -->
-									<input class="reset" type="reset" value= "" />
+									<input class="reset" type="reset" value= "" onclick="document.getElementById('di2000').focus(); return true;" />
 									
 								</p>
 							</td>
@@ -159,73 +171,73 @@
 						<tr>
 							<td> 
 								<br /><label class="style-6" for="di500">500</label>
-								<input class="style-5" type="number" id="di500" name="di500" min="0" max="999" step="1" tabindex=2 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di500" name="di500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do500" name="do500" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do500" name="do500" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di100">100</label>
-								<input class="style-5" type="number" id="di100" name="di100" min="0" max="999" step="1" tabindex=3 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di100" name="di100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do100" name="do100" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do100" name="do100" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di50">50</label>
-								<input class="style-5" type="number" id="di50" name="di50" min="0" max="999" step="1" tabindex=4 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di50" name="di50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do50" name="do50" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do50" name="do50" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di20">20</label>
-								<input class="style-5" type="number" id="di20" name="di20" min="0" max="999" step="1" tabindex=5 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di20" name="di20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do20" name="do20" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do20" name="do20" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di10">10</label>
-								<input class="style-5" type="number" id="di10" name="di10" min="0" max="999" step="1" tabindex=6 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di10" name="di10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do10" name="do10" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do10" name="do10" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di5">5</label>
-								<input class="style-5" type="number" id="di5" name="di5" min="0" max="999" step="1" tabindex=7 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di5" name="di5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="do5" name="do5" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="do5" name="do5" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="dicoins">Coins</label>
-								<input class="style-5" type="number" id="dicoins" name="dicoins" min="0" max="999" step="1" tabindex=8 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="dicoins" name="dicoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="docoins" name="docoins" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="docoins" name="docoins" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="disoiled">Soiled</label>
-								<input class="style-5" type="number" id="disoiled" name="disoiled" min="0" max="999" step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="disoiled" name="disoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="dosoiled" name="dosoiled" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="dosoiled" name="dosoiled" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
@@ -233,16 +245,16 @@
 								<label class="style-6"><b>Total</b></label>
 							</td>
 							<td>
-								<br /><input class="style-4" style="font-weight: bold;" type="number" id="dototal" name="dototal" tabindex=-1 readonly />
+								<br /><input class="style-4" style="font-weight: bold;" type="text" id="dototal" name="dototal" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<label class="style-6" for="dicash"><b>Cash Position</b></label>
-								<input class="style-5" type="number" id="dicash" name="dicash" min="0" max="999" step="1" tabindex=10 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="dicash" name="dicash" min="0"  step="1" tabindex=10 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="docash" name="docash" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="docash" name="docash" tabindex=-1 readonly />
 							</td>
 						</tr>
 					</table>
@@ -260,13 +272,13 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai2000">2000</label>
-								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0" max="999" step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0" max="999" step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0"  step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab2000" name="ab2000" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab2000" name="ab2000" tabindex=-1 readonly />
 							</td>
 							<td rowspan="7">
 								<p style="text-align:right; width:200px;">
@@ -274,7 +286,7 @@
 									<!-- <input type="submit" value="Input - Submit" />
 									&nbsp; -->
 									<!-- <button value="Input - Reset" onclick="saveSafe();">Save</button> -->
-									<input class="reset" type="reset" value= "" />
+									<input class="reset" type="reset" value= "" onclick="document.getElementById('ai2000').focus(); return true;" />
 									
 								</p>
 							</td>
@@ -282,109 +294,109 @@
 						<tr>
 							<td> 
 								<br /><label class="style-6" for="ai500">500</label>
-								<input class="style-5" type="number" id="ai500" name="ai500" min="0" max="999" step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai500" name="ai500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td> 
-								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0" max="999" step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0"  step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab500" name="ab500" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab500" name="ab500" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai100">100</label>
-								<input class="style-5" type="number" id="ai100" name="ai100" min="0" max="999" step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai100" name="ai100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0" max="999" step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0"  step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab100" name="ab100" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab100" name="ab100" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai50">50</label>
-								<input class="style-5" type="number" id="ai50" name="ai50" min="0" max="999" step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai50" name="ai50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0" max="999" step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0"  step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab50" name="ab50" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab50" name="ab50" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai20">20</label>
-								<input class="style-5" type="number" id="ai20" name="ai20" min="0" max="999" step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai20" name="ai20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0" max="999" step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0"  step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab20" name="ab20" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab20" name="ab20" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai10">10</label>
-								<input class="style-5" type="number" id="ai10" name="ai10" min="0" max="999" step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai10" name="ai10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0" max="999" step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0"  step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab10" name="ab10" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab10" name="ab10" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai5">5</label>
-								<input class="style-5" type="number" id="ai5" name="ai5" min="0" max="999" step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai5" name="ai5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0" max="999" step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0"  step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="ab5" name="ab5" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="ab5" name="ab5" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="aicoins">Coins</label>
-								<input class="style-5" type="number" id="aicoins" name="aicoins" min="0" max="999" step="1" tabindex=8 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="aicoins" name="aicoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="aocoins" name="aocoins" min="0" max="999" step="1" tabindex=17 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="aocoins" name="aocoins" min="0"  step="1" tabindex=17 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="abcoins" name="abcoins" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="abcoins" name="abcoins" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" for="aisoiled">Soiled</label>
-								<input class="style-5" type="number" id="aisoiled" name="aisoiled" min="0" max="999" step="1" tabindex=9 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="aisoiled" name="aisoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="aosoiled" name="aosoiled" min="0" max="999" step="1" tabindex=18 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="aosoiled" name="aosoiled" min="0"  step="1" tabindex=18 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-4" type="number" id="absoiled" name="absoiled" tabindex=-1 readonly />
+								<br /><input class="style-4" type="text" id="absoiled" name="absoiled" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
 							<td>
 								<br /><label class="style-6" style="font-weight: bold;" for="aitotoal">Total</label>
-								<input class="style-4" style="font-weight: bold;" type="number" id="aitotal" name="aitotal" tabindex=-1 readonly />
+								<input class="style-4" style="font-weight: bold;" type="text" id="aitotal" name="aitotal" tabindex=-1 readonly />
 							</td>
 							<td>
-								<br /><input class="style-4" style="font-weight: bold;" type="number" id="aototal" name="aototal" tabindex=-1 readonly />
+								<br /><input class="style-4" style="font-weight: bold;" type="text" id="aototal" name="aototal" tabindex=-1 readonly />
 							</td>
 							<td>
-								<br /><input class="style-4" style="font-weight: bold;" type="number" id="abtotal" name="abtotal" tabindex=-1 readonly />
+								<br /><input class="style-4" style="font-weight: bold;" type="text" id="abtotal" name="abtotal" tabindex=-1 readonly />
 							</td>
 						</tr>
 					</table>
@@ -401,53 +413,74 @@
 	
 	<!-- Form Java Script -->
 	<script>
+		function commify(value)	{
+			value = value.toString()
+			var chars = value.split("").reverse()
+			var withCommas = []
+			for(var i = 1; i <= chars.length; i++ )	{
+				withCommas.push(chars[i-1])
+				if(i%3==0 && i != chars.length )	{
+					withCommas.push(",")
+				}
+			}
+			var val = withCommas.reverse().join("")
+			return(val)
+		}
 		function myFunction(event){
 			event = event || window.event
 			var target = event.target || event.srcElement;
 			var id = target.id
 			
+			<!-- if (e.which == 13)	{ -->
+				<!-- e.target.nextSibling.nextSibling.focus(); -->
+				<!-- e.preventDefault(); -->
+			<!-- } -->
+			
 			switch (id)	{
 				case "di2000":
-					document.getElementById("do2000").value = document.getElementById("di2000").value * 2000
+					document.getElementById("do2000").value = commify(document.getElementById("di2000").value * 2000)
 				break;
 				case "di500":
-					document.getElementById("do500").value = document.getElementById("di500").value * 500
+					document.getElementById("do500").value = commify(document.getElementById("di500").value * 500)
 				break;
 				case "di100":
-					document.getElementById("do100").value = document.getElementById("di100").value * 100
+					document.getElementById("do100").value = commify(document.getElementById("di100").value * 100)
 				break;
 				case "di50":
-					document.getElementById("do50").value = document.getElementById("di50").value * 50
+					document.getElementById("do50").value = commify(document.getElementById("di50").value * 50)
 				break;
 				case "di20":
-					document.getElementById("do20").value = document.getElementById("di20").value * 20
+					document.getElementById("do20").value = commify(document.getElementById("di20").value * 20)
 				break;
 				case "di10":
-					document.getElementById("do10").value = document.getElementById("di10").value * 10
+					document.getElementById("do10").value = commify(document.getElementById("di10").value * 10)
 				break;
 				case "di5":
-					document.getElementById("do5").value = document.getElementById("di5").value * 5
+					document.getElementById("do5").value = commify(document.getElementById("di5").value * 5)
 				break;
 				case "dicoins":
-					document.getElementById("docoins").value = document.getElementById("dicoins").value
+					document.getElementById("docoins").value = commify(document.getElementById("dicoins").value)
 				break;
 				case "disoiled":
-					document.getElementById("dosoiled").value = document.getElementById("disoiled").value
+					document.getElementById("dosoiled").value = commify(document.getElementById("disoiled").value)
 				break;
 				default:
 					void(0)
 			}
-			document.getElementById("dototal").value = Number(document.getElementById("do2000").value) +
-				Number(document.getElementById("do500").value) +
-				Number(document.getElementById("do100").value) +
-				Number(document.getElementById("do50").value) +
-				Number(document.getElementById("do20").value) +
-				Number(document.getElementById("do10").value) +
-				Number(document.getElementById("do5").value) +
-				Number(document.getElementById("docoins").value) +
-				Number(document.getElementById("dosoiled").value)
+			document.getElementById("dototal").value = commify(Number(document.getElementById("do2000").value.replace(/,/g, "")) +
+				Number(document.getElementById("do500").value.replace(/,/g, "")) +
+				Number(document.getElementById("do100").value.replace(/,/g, "")) +
+				Number(document.getElementById("do50").value.replace(/,/g, "")) +
+				Number(document.getElementById("do20").value.replace(/,/g, "")) +
+				Number(document.getElementById("do10").value.replace(/,/g, "")) +
+				Number(document.getElementById("do5").value.replace(/,/g, "")) +
+				Number(document.getElementById("docoins").value.replace(/,/g, "")) +
+				Number(document.getElementById("dosoiled").value.replace(/,/g, "")))
 			
-			document.getElementById("docash").value = document.getElementById("dicash").value - document.getElementById("dototal").value
+			if(document.getElementById("dicash").value != "")	{
+				document.getElementById("docash").value = commify(document.getElementById("dototal").value.replace(/,/g, "") - document.getElementById("dicash").value)
+			}
+			
 		}
 
 		function arrivalCalc(event){
@@ -458,54 +491,54 @@
 			switch (id)	{
 				case "ai2000":
 				case "ao2000":
-					document.getElementById("ab2000").value = document.getElementById("ai2000").value - document.getElementById("ao2000").value
+					document.getElementById("ab2000").value = commify(document.getElementById("ai2000").value - document.getElementById("ao2000").value * 2000)
 				break;
 				case "ai500":
 				case "ao500":
-					document.getElementById("ab500").value = document.getElementById("ai500").value - document.getElementById("ao500").value
+					document.getElementById("ab500").value = commify(document.getElementById("ai500").value - document.getElementById("ao500").value * 500)
 				break;
 				case "ai100":
 				case "ao100":
-					document.getElementById("ab100").value = document.getElementById("ai100").value - document.getElementById("ao100").value
+					document.getElementById("ab100").value = commify(document.getElementById("ai100").value - document.getElementById("ao100").value * 100)
 				break;
 				case "ai50":
 				case "ao50":
-					document.getElementById("ab50").value = document.getElementById("ai50").value - document.getElementById("ao50").value
+					document.getElementById("ab50").value = commify(document.getElementById("ai50").value - document.getElementById("ao50").value * 50)
 				break;
 				case "ai20":
 				case "ao20":
-					document.getElementById("ab20").value = document.getElementById("ai20").value - document.getElementById("ao20").value
+					document.getElementById("ab20").value = commify(document.getElementById("ai20").value - document.getElementById("ao20").value * 20)
 				break;
 				case "ai10":
 				case "ao10":
-					document.getElementById("ab10").value = document.getElementById("ai10").value - document.getElementById("ao10").value
+					document.getElementById("ab10").value = commify(document.getElementById("ai10").value - document.getElementById("ao10").value * 10)
 				break;
 				case "ai5":
 				case "ao5":
-					document.getElementById("ab5").value = document.getElementById("ai5").value - document.getElementById("ao5").value
+					document.getElementById("ab5").value = commify(document.getElementById("ai5").value - document.getElementById("ao5").value * 5)
 				break;
 				case "aicoins":
 				case "aocoins":
-					document.getElementById("abcoins").value = document.getElementById("aicoins").value - document.getElementById("aocoins").value
+					document.getElementById("abcoins").value = commify(document.getElementById("aicoins").value - document.getElementById("aocoins").value)
 				break;
 				case "aisoiled":
 				case "aosoiled":
-					document.getElementById("absoiled").value = document.getElementById("aisoiled").value - document.getElementById("aosoiled").value
+					document.getElementById("absoiled").value = commify(document.getElementById("aisoiled").value - document.getElementById("aosoiled").value)
 				break;
 				default:
 					void(0)
 			}
-			document.getElementById("aitotal").value = Number(document.getElementById("ai2000").value) * 2000 +
-				Number(document.getElementById("ai500").value) * 500 +
-				Number(document.getElementById("ai100").value) * 100 +
-				Number(document.getElementById("ai50").value) * 50 +
-				Number(document.getElementById("ai20").value) * 20 +
-				Number(document.getElementById("ai10").value) * 10+
-				Number(document.getElementById("ai5").value) * 5 +
+			document.getElementById("aitotal").value = commify(Number(document.getElementById("ai2000").value) +
+				Number(document.getElementById("ai500").value) +
+				Number(document.getElementById("ai100").value) +
+				Number(document.getElementById("ai50").value) +
+				Number(document.getElementById("ai20").value) +
+				Number(document.getElementById("ai10").value)+
+				Number(document.getElementById("ai5").value) +
 				Number(document.getElementById("aicoins").value) +
-				Number(document.getElementById("aisoiled").value)
+				Number(document.getElementById("aisoiled").value))
 				
-			document.getElementById("aototal").value = Number(document.getElementById("ao2000").value) * 2000 +
+			document.getElementById("aototal").value = commify(Number(document.getElementById("ao2000").value) * 2000 +
 				Number(document.getElementById("ao500").value) * 500 +
 				Number(document.getElementById("ao100").value) * 100 +
 				Number(document.getElementById("ao50").value) * 50 +
@@ -513,9 +546,9 @@
 				Number(document.getElementById("ao10").value) * 10 +
 				Number(document.getElementById("ao5").value) * 5 +
 				Number(document.getElementById("aocoins").value) +
-				Number(document.getElementById("aosoiled").value)
+				Number(document.getElementById("aosoiled").value))
 				
-			document.getElementById("abtotal").value = document.getElementById("aitotal").value - document.getElementById("aototal").value
+			document.getElementById("abtotal").value = commify(document.getElementById("aitotal").value.replace(/,/g, "") - document.getElementById("aototal").value.replace(/,/g, ""))
 		}
 		function saveSafe()	{
 			console.log("save files")
@@ -549,6 +582,107 @@
 			}
 			return null;
 		}
+		
+		
+		<!-- Enter should behave like Tab -->
+		var inputs = document.getElementsByTagName('input');
+		for (var x = 0; x < inputs.length; x++)	{
+			var input = inputs[x];
+			input.onkeypress = myTab;
+		}
+		function myTab(event)	{
+			event = event || window.event
+			if (event.which == 13)	{
+				switch (event.target.id)	{
+					case "di2000":
+						document.getElementById("di500").focus()
+					break;
+					case "di500":
+						document.getElementById("di100").focus()
+					break;
+					case "di100":
+						document.getElementById("di50").focus()
+					break;
+					case "di50":
+						document.getElementById("di20").focus()
+					break;
+					case "di20":
+						document.getElementById("di10").focus()
+					break;
+					case "di10":
+						document.getElementById("di5").focus()
+					break;
+					case "di5":
+						document.getElementById("dicoins").focus()
+					break;
+					case "dicoins":
+						document.getElementById("disoiled").focus()
+					break;
+					case "disoiled":
+						document.getElementById("dicash").focus()
+					break;
+					case "ai2000":
+						document.getElementById("ai500").focus()
+					break;
+					case "ai500":
+						document.getElementById("ai100").focus()
+					break;
+					case "ai100":
+						document.getElementById("ai50").focus()
+					break;
+					case "ai50":
+						document.getElementById("ai20").focus()
+					break;
+					case "ai20":
+						document.getElementById("ai10").focus()
+					break;
+					case "ai10":
+						document.getElementById("ai5").focus()
+					break;
+					case "ai5":
+						document.getElementById("aicoins").focus()
+					break;
+					case "aicoins":
+						document.getElementById("aisoiled").focus()
+					break;
+					case "aisoiled":
+						document.getElementById("ao2000").focus()
+					break;
+					case "ao2000":
+						document.getElementById("ao500").focus()
+					break;
+					case "ao500":
+						document.getElementById("ao100").focus()
+					break;
+					case "ao100":
+						document.getElementById("ao50").focus()
+					break;
+					case "ao50":
+						document.getElementById("ao20").focus()
+					break;
+					case "ao20":
+						document.getElementById("ao10").focus()
+					break;
+					case "ao10":
+						document.getElementById("ao5").focus()
+					break;
+					case "ao5":
+						document.getElementById("aocoins").focus()
+					break;
+					case "aocoins":
+						document.getElementById("aosoiled").focus()
+					break;					
+					default:
+						void(0)
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
 	</script>
 	
 	<!-- Tabbed menu Java script -->
