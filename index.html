@@ -11,6 +11,7 @@
 		  border-bottom: solid 1px #c9c9c9;
 		  transition: border 0.3s;
 		  text-align: right;
+		  font-size: larger;
 		  width: 150px;
 		}
 		.style-5 {
@@ -35,6 +36,9 @@
 			display:inline-block;
 			text-align: right;
 			
+		}
+		.style-error {
+			color: #ff0000;
 		}
 
 		td.style-6 {
@@ -277,7 +281,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai2000">2000</label>
-								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0"  step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
@@ -299,7 +303,7 @@
 						<tr>
 							<td> 
 								<br /><label class="style-6" for="ai500">500</label>
-								<input class="style-5" type="number" id="ai500" name="ai500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai500" name="ai500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td> 
 								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0"  step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
@@ -311,7 +315,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai100">100</label>
-								<input class="style-5" type="number" id="ai100" name="ai100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai100" name="ai100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0"  step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
@@ -323,7 +327,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai50">50</label>
-								<input class="style-5" type="number" id="ai50" name="ai50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai50" name="ai50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0"  step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
@@ -335,7 +339,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai20">20</label>
-								<input class="style-5" type="number" id="ai20" name="ai20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai20" name="ai20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0"  step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
@@ -347,7 +351,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai10">10</label>
-								<input class="style-5" type="number" id="ai10" name="ai10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai10" name="ai10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0"  step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
@@ -359,7 +363,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai5">5</label>
-								<input class="style-5" type="number" id="ai5" name="ai5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="ai5" name="ai5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0"  step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
@@ -424,7 +428,7 @@
 								<input class="style-5" type="number" id="cc2000" name="cc2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs2000" name="cs2000" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs2000" name="cs2000" min="0"  step="1" tabindex=11 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct2000" name="ct2000" tabindex=-1 readonly />
@@ -453,7 +457,7 @@
 								<input class="style-5" type="number" id="cc500" name="cc500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs500" name="cs500" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs500" name="cs500" min="0"  step="1" tabindex=12 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct500" name="ct500" tabindex=-1 readonly />
@@ -472,7 +476,7 @@
 								<input class="style-5" type="number" id="cc100" name="cc100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs100" name="cs100" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs100" name="cs100" min="0"  step="1" tabindex=13 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct100" name="ct100" tabindex=-1 readonly />
@@ -491,7 +495,7 @@
 								<input class="style-5" type="number" id="cc50" name="cc50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs50" name="cs50" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs50" name="cs50" min="0"  step="1" tabindex=14 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct50" name="ct50" tabindex=-1 readonly />
@@ -510,7 +514,7 @@
 								<input class="style-5" type="number" id="cc20" name="cc20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs20" name="cs20" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs20" name="cs20" min="0"  step="1" tabindex=15 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct20" name="ct20" tabindex=-1 readonly />
@@ -531,7 +535,7 @@
 								<input class="style-5" type="number" id="cc10" name="cc10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs10" name="cs10" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs10" name="cs10" min="0"  step="1" tabindex=16 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct10" name="ct10" tabindex=-1 readonly />
@@ -552,7 +556,7 @@
 								<input class="style-5" type="number" id="cc5" name="cc5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs5" name="cs5" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cs5" name="cs5" min="0"  step="1" tabindex=17 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct5" name="ct5" tabindex=-1 readonly />
@@ -573,7 +577,7 @@
 								<input class="style-5" type="number" id="cccoins" name="cccoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cscoins" name="cscoins" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cscoins" name="cscoins" min="0"  step="1" tabindex=18 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ctcoins" name="ctcoins" tabindex=-1 readonly />
@@ -594,7 +598,7 @@
 								<input class="style-5" type="number" id="ccsoiled" name="ccsoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cssoiled" name="cssoiled" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cssoiled" name="cssoiled" min="0"  step="1" tabindex=19 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ctsoiled" name="ctsoiled" tabindex=-1 readonly />
@@ -627,6 +631,23 @@
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="cgtotal" name="cgtotal" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="style-6" for="cccash"><b>Cash Position</b></label>
+								<input class="style-5" type="number" id="cccash" name="cccash" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cgcash" name="cgcash" tabindex=-1 readonly />
 							</td>
 						</tr>
 					</table>
@@ -890,6 +911,32 @@
 				
 			document.getElementById("cgtotal").value = commify(Number(document.getElementById("cttotal").value.replace(/,/g, "")) +
 				Number(document.getElementById("catotal").value.replace(/,/g, "")))
+				
+			if(document.getElementById("cccash").value != "")	{
+				document.getElementById("cgcash").value = commify(document.getElementById("cgtotal").value.replace(/,/g, "") - document.getElementById("cccash").value)
+			}
+		
+		}
+		
+		function isNotMultipleOf(amount, multiple)	{
+			amount = Number(amount)
+			multiple = Number(multiple)
+			if(amount % multiple == 0)	{
+				return(false)
+			}
+			return(true)
+			
+		
+		}
+		
+		function validateCount(event)	{
+			event = event || window.event
+			var target = event.target || event.srcElement;
+			var id = target.id
+			document.getElementById(id).className = 'style-5';
+			if(isNotMultipleOf(document.getElementById(id).value, id.substr(2)))	{
+				document.getElementById(id).className += " style-error"
+			}
 		}
 		
 		
@@ -925,6 +972,8 @@
 			}
 			return null;
 		}
+		
+		
 		
 		
 		<!-- Enter should behave like Tab -->
