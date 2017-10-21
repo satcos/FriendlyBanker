@@ -40,6 +40,12 @@
 		.style-error {
 			color: #ff0000;
 		}
+		.style-positive {
+			color: #07b209;
+		}
+		.style-negative {
+			color: #ff0000;
+		}
 
 		td.style-6 {
 			/* padding-top: .0em;
@@ -187,9 +193,18 @@
 							</td>
 						</tr>
 						<tr>
+							<td> 
+								<br /><label class="style-6" for="di200">200</label>
+								<input class="style-5" type="number" id="di200" name="di200" min="0"  step="1" tabindex=3 autocomplete="off" oninput="myFunction()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="do200" name="do200" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
 							<td>
 								<br /><label class="style-6" for="di100">100</label>
-								<input class="style-5" type="number" id="di100" name="di100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di100" name="di100" min="0"  step="1" tabindex=4 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="do100" name="do100" tabindex=-1 readonly />
@@ -198,7 +213,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di50">50</label>
-								<input class="style-5" type="number" id="di50" name="di50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di50" name="di50" min="0"  step="1" tabindex=5 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="do50" name="do50" tabindex=-1 readonly />
@@ -207,7 +222,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di20">20</label>
-								<input class="style-5" type="number" id="di20" name="di20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di20" name="di20" min="0"  step="1" tabindex=6 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="do20" name="do20" tabindex=-1 readonly />
@@ -216,7 +231,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di10">10</label>
-								<input class="style-5" type="number" id="di10" name="di10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di10" name="di10" min="0"  step="1" tabindex=7 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="do10" name="do10" tabindex=-1 readonly />
@@ -225,7 +240,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="di5">5</label>
-								<input class="style-5" type="number" id="di5" name="di5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="di5" name="di5" min="0"  step="1" tabindex=8 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="do5" name="do5" tabindex=-1 readonly />
@@ -234,7 +249,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="dicoins">Coins</label>
-								<input class="style-5" type="number" id="dicoins" name="dicoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="dicoins" name="dicoins" min="0"  step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="docoins" name="docoins" tabindex=-1 readonly />
@@ -243,7 +258,7 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="disoiled">Soiled</label>
-								<input class="style-5" type="number" id="disoiled" name="disoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="disoiled" name="disoiled" min="0"  step="1" tabindex=10 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="dosoiled" name="dosoiled" tabindex=-1 readonly />
@@ -260,7 +275,7 @@
 						<tr>
 							<td>
 								<label class="style-6" for="dicash"><b>Cash Position</b></label>
-								<input class="style-5" type="number" id="dicash" name="dicash" min="0"  step="1" tabindex=10 autocomplete="off" oninput="myFunction()" />
+								<input class="style-5" type="number" id="dicash" name="dicash" min="0"  step="1" tabindex=11 autocomplete="off" oninput="myFunction()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="docash" name="docash" tabindex=-1 readonly />
@@ -284,7 +299,7 @@
 								<input class="style-5" type="number" id="ai2000" name="ai2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0"  step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao2000" name="ao2000" min="0"  step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab2000" name="ab2000" tabindex=-1 readonly />
@@ -306,19 +321,31 @@
 								<input class="style-5" type="number" id="ai500" name="ai500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td> 
-								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0"  step="1" tabindex=11 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao500" name="ao500" min="0"  step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab500" name="ab500" tabindex=-1 readonly />
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<br /><label class="style-6" for="ai100">100</label>
-								<input class="style-5" type="number" id="ai100" name="ai100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+							<td> 
+								<br /><label class="style-6" for="ai200">200</label>
+								<input class="style-5" type="number" id="ai200" name="ai200" min="0"  step="1" tabindex=3 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+							</td>
+							<td> 
+								<br /><input class="style-5" type="number" id="ao200" name="ao200" min="0"  step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0"  step="1" tabindex=12 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-4" type="text" id="ab200" name="ab200" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="ai100">100</label>
+								<input class="style-5" type="number" id="ai100" name="ai100" min="0"  step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="ao100" name="ao100" min="0"  step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab100" name="ab100" tabindex=-1 readonly />
@@ -327,10 +354,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai50">50</label>
-								<input class="style-5" type="number" id="ai50" name="ai50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+								<input class="style-5" type="number" id="ai50" name="ai50" min="0"  step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0"  step="1" tabindex=13 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao50" name="ao50" min="0"  step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab50" name="ab50" tabindex=-1 readonly />
@@ -339,10 +366,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai20">20</label>
-								<input class="style-5" type="number" id="ai20" name="ai20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+								<input class="style-5" type="number" id="ai20" name="ai20" min="0"  step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0"  step="1" tabindex=14 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao20" name="ao20" min="0"  step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab20" name="ab20" tabindex=-1 readonly />
@@ -351,10 +378,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai10">10</label>
-								<input class="style-5" type="number" id="ai10" name="ai10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+								<input class="style-5" type="number" id="ai10" name="ai10" min="0"  step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0"  step="1" tabindex=15 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao10" name="ao10" min="0"  step="1" tabindex=17 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab10" name="ab10" tabindex=-1 readonly />
@@ -363,10 +390,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ai5">5</label>
-								<input class="style-5" type="number" id="ai5" name="ai5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
+								<input class="style-5" type="number" id="ai5" name="ai5" min="0"  step="1" tabindex=8 autocomplete="off" oninput="arrivalCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0"  step="1" tabindex=16 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="ao5" name="ao5" min="0"  step="1" tabindex=18 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ab5" name="ab5" tabindex=-1 readonly />
@@ -375,10 +402,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="aicoins">Coins</label>
-								<input class="style-5" type="number" id="aicoins" name="aicoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="aicoins" name="aicoins" min="0"  step="1" tabindex=9 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="aocoins" name="aocoins" min="0"  step="1" tabindex=17 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="aocoins" name="aocoins" min="0"  step="1" tabindex=19 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="abcoins" name="abcoins" tabindex=-1 readonly />
@@ -387,10 +414,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="aisoiled">Soiled</label>
-								<input class="style-5" type="number" id="aisoiled" name="aisoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="arrivalCalc()" />
+								<input class="style-5" type="number" id="aisoiled" name="aisoiled" min="0"  step="1" tabindex=10 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="aosoiled" name="aosoiled" min="0"  step="1" tabindex=18 autocomplete="off" oninput="arrivalCalc()" />
+								<br /><input class="style-5" type="number" id="aosoiled" name="aosoiled" min="0"  step="1" tabindex=20 autocomplete="off" oninput="arrivalCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="absoiled" name="absoiled" tabindex=-1 readonly />
@@ -428,7 +455,7 @@
 								<input class="style-5" type="number" id="cc2000" name="cc2000" min="0"  step="1" tabindex=1 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs2000" name="cs2000" min="0"  step="1" tabindex=11 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs2000" name="cs2000" min="0"  step="1" tabindex=12 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct2000" name="ct2000" tabindex=-1 readonly />
@@ -457,7 +484,7 @@
 								<input class="style-5" type="number" id="cc500" name="cc500" min="0"  step="1" tabindex=2 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs500" name="cs500" min="0"  step="1" tabindex=12 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs500" name="cs500" min="0"  step="1" tabindex=13 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct500" name="ct500" tabindex=-1 readonly />
@@ -472,11 +499,30 @@
 						</tr>
 						<tr>
 							<td>
-								<br /><label class="style-6" for="cc100">100</label>
-								<input class="style-5" type="number" id="cc100" name="cc100" min="0"  step="1" tabindex=3 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><label class="style-6" for="cc200">200</label>
+								<input class="style-5" type="number" id="cc200" name="cc200" min="0"  step="1" tabindex=3 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs100" name="cs100" min="0"  step="1" tabindex=13 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs200" name="cs200" min="0"  step="1" tabindex=14 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="ct200" name="ct200" tabindex=-1 readonly />
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+								<br /><input class="style-4" type="text" id="cg200" name="cg200" tabindex=-1 readonly />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><label class="style-6" for="cc100">100</label>
+								<input class="style-5" type="number" id="cc100" name="cc100" min="0"  step="1" tabindex=4 autocomplete="off" oninput="coinwareCalc()" />
+							</td>
+							<td>
+								<br /><input class="style-5" type="number" id="cs100" name="cs100" min="0"  step="1" tabindex=15 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct100" name="ct100" tabindex=-1 readonly />
@@ -492,10 +538,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="cc50">50</label>
-								<input class="style-5" type="number" id="cc50" name="cc50" min="0"  step="1" tabindex=4 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="cc50" name="cc50" min="0"  step="1" tabindex=5 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs50" name="cs50" min="0"  step="1" tabindex=14 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs50" name="cs50" min="0"  step="1" tabindex=16 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct50" name="ct50" tabindex=-1 readonly />
@@ -511,10 +557,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="cc20">20</label>
-								<input class="style-5" type="number" id="cc20" name="cc20" min="0"  step="1" tabindex=5 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="cc20" name="cc20" min="0"  step="1" tabindex=6 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs20" name="cs20" min="0"  step="1" tabindex=15 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs20" name="cs20" min="0"  step="1" tabindex=17 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct20" name="ct20" tabindex=-1 readonly />
@@ -532,10 +578,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="cc10">10</label>
-								<input class="style-5" type="number" id="cc10" name="cc10" min="0"  step="1" tabindex=6 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="cc10" name="cc10" min="0"  step="1" tabindex=7 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs10" name="cs10" min="0"  step="1" tabindex=16 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs10" name="cs10" min="0"  step="1" tabindex=18 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct10" name="ct10" tabindex=-1 readonly />
@@ -553,10 +599,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="cc5">5</label>
-								<input class="style-5" type="number" id="cc5" name="cc5" min="0"  step="1" tabindex=7 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="cc5" name="cc5" min="0"  step="1" tabindex=8 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cs5" name="cs5" min="0"  step="1" tabindex=17 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
+								<br /><input class="style-5" type="number" id="cs5" name="cs5" min="0"  step="1" tabindex=19 autocomplete="off" oninput="coinwareCalc()" onfocusout="validateCount()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ct5" name="ct5" tabindex=-1 readonly />
@@ -574,10 +620,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="cccoins">Coins</label>
-								<input class="style-5" type="number" id="cccoins" name="cccoins" min="0"  step="1" tabindex=8 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="cccoins" name="cccoins" min="0"  step="1" tabindex=9 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cscoins" name="cscoins" min="0"  step="1" tabindex=18 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cscoins" name="cscoins" min="0"  step="1" tabindex=20 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ctcoins" name="ctcoins" tabindex=-1 readonly />
@@ -595,10 +641,10 @@
 						<tr>
 							<td>
 								<br /><label class="style-6" for="ccsoiled">Soiled</label>
-								<input class="style-5" type="number" id="ccsoiled" name="ccsoiled" min="0"  step="1" tabindex=9 autocomplete="off" oninput="coinwareCalc()" />
+								<input class="style-5" type="number" id="ccsoiled" name="ccsoiled" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
-								<br /><input class="style-5" type="number" id="cssoiled" name="cssoiled" min="0"  step="1" tabindex=19 autocomplete="off" oninput="coinwareCalc()" />
+								<br /><input class="style-5" type="number" id="cssoiled" name="cssoiled" min="0"  step="1" tabindex=21 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="ctsoiled" name="ctsoiled" tabindex=-1 readonly />
@@ -635,16 +681,13 @@
 						</tr>
 						<tr>
 							<td>
-								<label class="style-6" for="cccash"><b>Cash Position</b></label>
-								<input class="style-5" type="number" id="cccash" name="cccash" min="0"  step="1" tabindex=10 autocomplete="off" oninput="coinwareCalc()" />
 							</td>
 							<td>
 							</td>
-							<td>
-							</td>
-							<td>
-							</td>
-							<td>
+							<td colspan="3" align="right">
+								<br /><label class="style-6" for="cccash"><b>Cash Position</b></label>
+								<input class="style-5" type="number" id="cccash" name="cccash" min="0"  step="1" tabindex=11 autocomplete="off" oninput="coinwareCalc()" />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							</td>
 							<td>
 								<br /><input class="style-4" type="text" id="cgcash" name="cgcash" tabindex=-1 readonly />
@@ -691,6 +734,9 @@
 				case "di500":
 					document.getElementById("do500").value = commify(document.getElementById("di500").value * 500)
 				break;
+				case "di200":
+					document.getElementById("do200").value = commify(document.getElementById("di200").value * 200)
+				break;
 				case "di100":
 					document.getElementById("do100").value = commify(document.getElementById("di100").value * 100)
 				break;
@@ -717,6 +763,7 @@
 			}
 			document.getElementById("dototal").value = commify(Number(document.getElementById("do2000").value.replace(/,/g, "")) +
 				Number(document.getElementById("do500").value.replace(/,/g, "")) +
+				Number(document.getElementById("do200").value.replace(/,/g, "")) +
 				Number(document.getElementById("do100").value.replace(/,/g, "")) +
 				Number(document.getElementById("do50").value.replace(/,/g, "")) +
 				Number(document.getElementById("do20").value.replace(/,/g, "")) +
@@ -727,6 +774,14 @@
 			
 			if(document.getElementById("dicash").value != "")	{
 				document.getElementById("docash").value = commify(document.getElementById("dototal").value.replace(/,/g, "") - document.getElementById("dicash").value)
+				if(Number(document.getElementById("docash").value.replace(/,/g, "")) >= 0)	{
+					document.getElementById("docash").classList.remove("style-negative");
+					document.getElementById("docash").classList.add("style-positive");
+				}
+				else{
+					document.getElementById("docash").classList.remove("style-positive");
+					document.getElementById("docash").classList.add("style-negative");
+				}
 			}
 			
 		}
@@ -744,6 +799,10 @@
 				case "ai500":
 				case "ao500":
 					document.getElementById("ab500").value = commify(document.getElementById("ai500").value - document.getElementById("ao500").value * 500)
+				break;
+				case "ai200":
+				case "ao200":
+					document.getElementById("ab200").value = commify(document.getElementById("ai200").value - document.getElementById("ao200").value * 200)
 				break;
 				case "ai100":
 				case "ao100":
@@ -778,6 +837,7 @@
 			}
 			document.getElementById("aitotal").value = commify(Number(document.getElementById("ai2000").value) +
 				Number(document.getElementById("ai500").value) +
+				Number(document.getElementById("ai200").value) +
 				Number(document.getElementById("ai100").value) +
 				Number(document.getElementById("ai50").value) +
 				Number(document.getElementById("ai20").value) +
@@ -788,6 +848,7 @@
 				
 			document.getElementById("aototal").value = commify(Number(document.getElementById("ao2000").value) * 2000 +
 				Number(document.getElementById("ao500").value) * 500 +
+				Number(document.getElementById("ao200").value) * 200 +
 				Number(document.getElementById("ao100").value) * 100 +
 				Number(document.getElementById("ao50").value) * 50 +
 				Number(document.getElementById("ao20").value) * 20 +
@@ -797,6 +858,14 @@
 				Number(document.getElementById("aosoiled").value))
 				
 			document.getElementById("abtotal").value = commify(document.getElementById("aitotal").value.replace(/,/g, "") - document.getElementById("aototal").value.replace(/,/g, ""))
+			if(Number(document.getElementById("abtotal").value.replace(/,/g, "")) >= 0)	{
+				document.getElementById("abtotal").classList.remove("style-negative");
+				document.getElementById("abtotal").classList.add("style-positive");
+			}
+			else{
+				document.getElementById("abtotal").classList.remove("style-positive");
+				document.getElementById("abtotal").classList.add("style-negative");
+			}
 		}
 		
 		
@@ -814,6 +883,11 @@
 				case "cs500":
 					document.getElementById("ct500").value = commify(document.getElementById("cc500").value * 500 + document.getElementById("cs500").value * 1)
 					document.getElementById("cg500").value = document.getElementById("ct500").value
+				break;
+				case "cc200":
+				case "cs200":
+					document.getElementById("ct200").value = commify(document.getElementById("cc200").value * 200 + document.getElementById("cs200").value * 1)
+					document.getElementById("cg200").value = document.getElementById("ct200").value
 				break;
 				case "cc100":
 				case "cs100":
@@ -904,16 +978,24 @@
 				Number(document.getElementById("ctcoins").value.replace(/,/g, "")) +
 				Number(document.getElementById("ctsoiled").value.replace(/,/g, "")))
 			
-			document.getElementById("catotal").value = commify(Number(document.getElementById("ca20").value) +
-				Number(document.getElementById("ca10").value)+
-				Number(document.getElementById("ca5").value) +
-				Number(document.getElementById("cacoins").value))
+			document.getElementById("catotal").value = commify(Number(document.getElementById("ca20").value.replace(/,/g, "")) +
+				Number(document.getElementById("ca10").value.replace(/,/g, ""))+
+				Number(document.getElementById("ca5").value.replace(/,/g, "")) +
+				Number(document.getElementById("cacoins").value.replace(/,/g, "")))
 				
 			document.getElementById("cgtotal").value = commify(Number(document.getElementById("cttotal").value.replace(/,/g, "")) +
 				Number(document.getElementById("catotal").value.replace(/,/g, "")))
 				
 			if(document.getElementById("cccash").value != "")	{
 				document.getElementById("cgcash").value = commify(document.getElementById("cgtotal").value.replace(/,/g, "") - document.getElementById("cccash").value)
+				if(Number(document.getElementById("cgcash").value.replace(/,/g, "")) >= 0)	{
+					document.getElementById("cgcash").classList.remove("style-negative");
+					document.getElementById("cgcash").classList.add("style-positive");
+				}
+				else{
+					document.getElementById("cgcash").classList.remove("style-positive");
+					document.getElementById("cgcash").classList.add("style-negative");
+				}
 			}
 		
 		}
@@ -990,6 +1072,9 @@
 						document.getElementById("di500").focus()
 					break;
 					case "di500":
+						document.getElementById("di200").focus()
+					break;
+					case "di200":
 						document.getElementById("di100").focus()
 					break;
 					case "di100":
@@ -1017,6 +1102,9 @@
 						document.getElementById("ai500").focus()
 					break;
 					case "ai500":
+						document.getElementById("ai200").focus()
+					break;
+					case "ai200":
 						document.getElementById("ai100").focus()
 					break;
 					case "ai100":
@@ -1044,6 +1132,9 @@
 						document.getElementById("ao500").focus()
 					break;
 					case "ao500":
+						document.getElementById("ao200").focus()
+					break;
+					case "ao200":
 						document.getElementById("ao100").focus()
 					break;
 					case "ao100":
@@ -1068,6 +1159,9 @@
 						document.getElementById("cc500").focus()
 					break;
 					case "cc500":
+						document.getElementById("cc200").focus()
+					break;
+					case "cc200":
 						document.getElementById("cc100").focus()
 					break;
 					case "cc100":
@@ -1095,6 +1189,9 @@
 						document.getElementById("cs500").focus()
 					break;
 					case "cs500":
+						document.getElementById("cs200").focus()
+					break;
+					case "cs200":
 						document.getElementById("cs100").focus()
 					break;
 					case "cs100":
@@ -1115,13 +1212,7 @@
 					case "cscoins":
 						document.getElementById("cssoiled").focus()
 					break;
-					
-					
-					
-					
-					
-					
-					
+
 					default:
 						void(0)
 				}
