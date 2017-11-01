@@ -19,7 +19,7 @@ On entering Cash Position, Balance amount is computed and colour coded based on 
 *Cash Position* at the bottom can be used to find the difference in tally.<br/><br/>
 
 ## Version
-Latest version is available in master branch. Other version are available in the respective branches. 
+Latest stable version is available in master branch. Other version are available in the respective branches. 
 Inspired from Android, used names of android system starting from version 3 Cupcake.
 Version 1 and 2 are left with number and no names
 
