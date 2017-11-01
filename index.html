@@ -714,6 +714,19 @@
 	
 	<!-- Form Java Script -->
 	<script>
+	
+	
+		<!-- Dynamically add attributes to input element -->
+		<!-- This give better control over html element and makes the life easy -->
+		var inputs = document.getElementById("denominationTable").querySelectorAll("input.style-5");
+		for (var x = 0; x < inputs.length; x++)	{
+			var input = inputs[x];
+			input.oninput = myFunction;
+		}
+	
+	
+	
+	
 		function commify(value)	{
 			value = value.toString()
 			var chars = value.split("").reverse()
