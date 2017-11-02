@@ -164,7 +164,7 @@
 	
 </head>
 <body style="background:#F6F9FC; font-family:Arial;">
-    <div style="width: 1120px; margin: 0 auto; padding: 12px 0 40px;">
+    <div style="width: 1120px; margin: 0 auto; padding: 2px 0 0px;">
         <ul class="tabs" data-persist="true">
             <li><a href="#view1">Denomination</a></li>
             <li><a href="#view2">Arrival</a></li>
@@ -705,21 +705,21 @@
 	
 	<!-- Form Java Script -->
 	<script>
-	
-	
 		<!-- Dynamically add attributes to input element -->
 		<!-- This give better control over HTML element and makes the life easy -->
 		<!-- Attribute for denominationTable -->
 		var inputs = document.getElementById("denominationTable").querySelectorAll("input.style-5");
 		for (var x = 0; x < inputs.length; x++)	{
 			var input = inputs[x];
-			input.oninput = myFunction;
+			input.onkeypress = myTab;
+			input.oninput = function(event){myFunction(event)};
 		}
 	
 		<!-- arrivalTable -->
 		var inputs = document.getElementById("arrivalTable").querySelectorAll("input.style-5");
 		for (var x = 0; x < inputs.length; x++)	{
 			var input = inputs[x];
+			input.onkeypress = myTab;
 			input.oninput = arrivalCalc;
 			<!-- if arrival input add count validation -->
 			if(input.id.substr(0,2) == "ai")	{
@@ -731,6 +731,7 @@
 		var inputs = document.getElementById("coinwareTable").querySelectorAll("input.style-5");
 		for (var x = 0; x < inputs.length; x++)	{
 			var input = inputs[x];
+			input.onkeypress = myTab;
 			input.oninput = coinwareCalc;
 			<!-- if input add count validation -->
 			if(input.id.substr(0,2) == "cs")	{
@@ -738,20 +739,51 @@
 			}
 		}
 	
-	
+		<!-- Introduce comma in amount -->
+		<!-- Reverse the digits -->
+		<!-- parse the digits and every 3rd digit add a comma -->
+		<!-- Finally reverse back the digits -->
+		<!-- Check corner cases like not adding comma if MSD is negative signe and -->
+		<!-- not adding comma as MSD -->
 		function commify(value)	{
 			value = value.toString()
 			var chars = value.split("").reverse()
 			var withCommas = []
 			for(var i = 1; i <= chars.length; i++ )	{
 				withCommas.push(chars[i-1])
-				if(i%3==0 && i != chars.length )	{
+				if(i%3==0 && i != chars.length && chars[i] != "-" )	{
 					withCommas.push(",")
 				}
 			}
 			var val = withCommas.reverse().join("")
 			return(val)
 		}
+		
+		<!-- Check given amount is multiple of 'multiple' -->
+		function isNotMultipleOf(amount, multiple)	{
+			amount = Number(amount)
+			multiple = Number(multiple)
+			<!-- If coin or solided notes make the multiple as 1 -->
+			if(isNaN(multiple))	{
+				multiple = 1
+			}
+			if(amount % multiple == 0)	{
+				return(false)
+			}
+			return(true)
+		}
+		<!-- Some input filed should have amount multiple of the denomination -->
+		<!-- if its not so highlight the text in red colour -->
+		function validateCount(event)	{
+			event = event || window.event
+			var target = event.target || event.srcElement;
+			var id = target.id
+			document.getElementById(id).className = 'style-5';
+			if(isNotMultipleOf(document.getElementById(id).value, id.substr(2)))	{
+				document.getElementById(id).className += " style-error"
+			}
+		}
+		
 		function myFunction(event){
 			event = event || window.event
 			var target = event.target || event.srcElement;
@@ -903,7 +935,6 @@
 			}
 		}
 		
-		
 		function coinwareCalc(event){
 			event = event || window.event
 			var target = event.target || event.srcElement;
@@ -1034,72 +1065,8 @@
 			}
 		
 		}
-		
-		function isNotMultipleOf(amount, multiple)	{
-			amount = Number(amount)
-			multiple = Number(multiple)
-			if(amount % multiple == 0)	{
-				return(false)
-			}
-			return(true)
-			
-		
-		}
-		
-		function validateCount(event)	{
-			event = event || window.event
-			var target = event.target || event.srcElement;
-			var id = target.id
-			console.log(id)
-			document.getElementById(id).className = 'style-5';
-			if(isNotMultipleOf(document.getElementById(id).value, id.substr(2)))	{
-				document.getElementById(id).className += " style-error"
-			}
-		}
-		
-		
-		function saveSafe()	{
-			console.log("save files")
-			createCookie("ai2000", document.getElementById("ai2000").value)
-			createCookie("ai500", document.getElementById("ai500").value)
-			createCookie("ai100", document.getElementById("ai100").value)
-			createCookie("ai50", document.getElementById("ai50").value)
-			createCookie("ai20", document.getElementById("ai20").value)
-			createCookie("ai10", document.getElementById("ai10").value)
-			createCookie("ai5", document.getElementById("ai5").value)
-			createCookie("aicoins", document.getElementById("aicoins").value)
-			createCookie("aisoiled", document.getElementById("aisoiled").value)
-		}
 
-		function createCookie(name, value) {
-			// var date = new Date();
-			// date.setTime(date.getTime()+(days*24*60*60*1000));
-			// var expires = "; expires="+date.toGMTString();
-			// else 
-			var expires = "";
-			document.cookie = name+"="+value+expires+"; path=/";
-		}
-
-		function readCookie(name) {
-			var nameEQ = name + "=";
-			var ca = document.cookie.split(';');
-			for(var i=0;i < ca.length;i++) {
-				var c = ca[i];
-				while (c.charAt(0)==' ') c = c.substring(1,c.length);
-				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-			}
-			return null;
-		}
-		
-		
-		
-		
 		<!-- Enter should behave like Tab -->
-		var inputs = document.getElementsByTagName('input');
-		for (var x = 0; x < inputs.length; x++)	{
-			var input = inputs[x];
-			input.onkeypress = myTab;
-		}
 		function myTab(event)	{
 			event = event || window.event
 			if (event.which == 13)	{
@@ -1254,12 +1221,6 @@
 				}
 			}
 		}
-		
-		
-		
-		
-		
-		
 	</script>
 	
 	<!-- Tabbed menu Java script -->
