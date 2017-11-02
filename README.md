@@ -1,4 +1,4 @@
-# Friendly Banker - Cupcake
+# Friendly Banker - Donut
 
 
 ## Introduction
