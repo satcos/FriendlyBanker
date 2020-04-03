@@ -24,6 +24,8 @@ Inspired from Android, used names of android system starting from version 3 Cupc
 Version 1 and 2 are left with number and no names
 
 ## Version Log
+- Version 5 Eclair
+	- Fixed 200 rupees problem in Coinware tab
 - Version 4 Donut
 	- Enabled support for Mozilla Firefox browser
 	- Element attributes are added pragmatically
